@@ -1,0 +1,23 @@
+<div class="card">
+  <img class="card-img-top" [src]="user.photo" [alt]="user.name" />
+  <div class="card-body">
+    <h5 class="card-title">{{ user.name }} {{ user.firstName }}</h5>
+    <div class="card-age">
+      <div *ngIf="isAgeVisible">Âge: {{ user.age }}</div>
+      <div *ngIf="!isAgeVisible">Âge: masqué</div>
+      <button class="btn btn-primary" (click)="toggleAge()">
+        {{ isAgeVisible ? "Masquer" : "Afficher" }} l'âge
+      </button>
+    </div>
+    <div class="card-quote">
+      <h5>
+        {{ user.quote || "Utilisez le champs pour ajouter votre citation" }}
+      </h5>
+      <input
+        type="text"
+        [(ngModel)]="user.quote"
+        placeholder="Saisir une citation..."
+      />
+    </div>
+  </div>
+</div>
