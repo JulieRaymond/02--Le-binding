@@ -19,9 +19,9 @@ interface User {
 })
 export class UserProfileComponent {
   user: User = {
-    name: 'Doe',
-    firstName: 'John',
-    age: 25,
+    name: 'Monsieur',
+    firstName: 'Lego',
+    age: 35,
     quote: '',
     photo: 'https://randomuser.me/api/portraits/lego/2.jpg'
   };
@@ -32,7 +32,4 @@ export class UserProfileComponent {
     this.isAgeVisible = !this.isAgeVisible;
   }
 
-  updateQuote(newQuote: string): void {
-    this.user.quote = newQuote;
-  }
 }
